@@ -10,7 +10,13 @@ html, body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
+    overflow-y: scroll;   
+    scrollbar-width: none;     
 }
+
+body::-webkit-scrollbar {
+    display: none;
+  }
 
 .container {
     width: 100%;
@@ -21,7 +27,10 @@ html, body {
 #navigation {
     width: 100%;
     height: 7.3rem;
-    background-color: #D9D9D9;
+    /* background-color: #D9D9D9; */
+    /* background-color: #05181f; */
+    background-color: #6a8994;
+
     z-index: 10;
     display: flex;
     justify-content: center;
