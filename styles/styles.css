@@ -6,17 +6,18 @@
     font-family: Unbounded;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: scroll;   
-    scrollbar-width: none;     
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 body::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .container {
     width: 100%;
@@ -38,7 +39,7 @@ body::-webkit-scrollbar {
     flex-direction: row;
 }
 
-#navigation > .container {
+#navigation>.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,14 +69,16 @@ body::-webkit-scrollbar {
 }
 
 
-.burger > .high-span-color{
-   background-color: rgb(61, 61, 61);
+.burger>.high-span-color {
+    background-color: rgb(61, 61, 61);
 }
-.burger > .middle-span-color{
+
+.burger>.middle-span-color {
     background-color: rgb(213, 0, 237);
     width: 75%
 }
-.burger > .last-span-color{
+
+.burger>.last-span-color {
     background-color: rgb(156, 156, 156);
     width: 55%;
 }
@@ -99,11 +102,13 @@ body::-webkit-scrollbar {
 
 .burger.active span:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
-    
+
 }
+
 .burger.active span:nth-child(2) {
     opacity: 0;
 }
+
 .burger.active span:nth-child(3) {
     width: 100%;
     background-color: rgb(151, 147, 147);
@@ -111,9 +116,9 @@ body::-webkit-scrollbar {
     box-shadow: 1px 1px 1px;
 }
 
-.logo > img {
- width: 60px;
- height: 74px;
+.logo>img {
+    width: 60px;
+    height: 74px;
 }
 
 /* HERO section */
@@ -130,12 +135,14 @@ body::-webkit-scrollbar {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Щоб не було розтягування */
+    object-fit: cover;
+    /* Щоб не було розтягування */
     z-index: 1;
 }
 
 .container {
-    position: relative; /* Щоб текст був над зображенням */
+    position: relative;
+    /* Щоб текст був над зображенням */
     z-index: 2;
     display: flex;
     justify-content: space-between;
@@ -177,7 +184,7 @@ body::-webkit-scrollbar {
 
 }
 
-.hero-btn > img {
+.hero-btn>img {
     max-width: 20px;
     max-height: 20px;
     margin-left: 10px;
@@ -188,52 +195,74 @@ body::-webkit-scrollbar {
 .stats {
     padding: 50px;
     display: flex;
-  }
-  
-  .grid-container {
+}
+
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, auto);
-    gap: 20px;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    /* grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto); */
+    gap: 0px;
+    /* border-right: 1px solid black;
+    border-bottom: 1px solid black; */
     width: fit-content;
-  }
-  
-  .grid-item {
+}
+
+.grid-container {
+    /* grid-template-columns: 1fr 230px 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* .grid-item {
     padding: 20px 40px;
     border-bottom: 1px solid black;
-  }
-  
-  .grid-item.top-right {
-    border-right: none;
-  }
-  
-  .grid-item.bottom-right {
-    border-right: none;
-  }
-  
-  .number {
-    display: block;
-    font-size: 36px;
-    font-weight: bold;
-  }
-  
-  .label {
+} */
+
+
+
+
+
+/* .label {
     display: block;
     font-size: 16px;
     margin-top: 5px;
-  }
-  
-  .grid-item.top-center .label {
-    white-space: pre-line;
-  }
-  
-  .grid-item.top-right {
+} */
+
+.grid-item.top-left {
+    grid-column: span 2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    display: flex;
+    align-items:center;
+    padding: 44px 4px 0px;
+    padding-left: 30px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.year {
+    /* display: block;
+    font-size: 36px;
+    font-weight: bold; */
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.grid-item.top-center {
+    border-right: 1px solid black;
+    padding: 0 30px 0 20px;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+
+.studio-area {
+    font-size: 36px;
+
+}
+/* .grid-item.top-right {
     grid-row: 1 / span 2;
     display: flex;
     align-items: center;
     border-left: none;
     padding-left: 60px;
-  }
-  
+} */
