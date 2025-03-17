@@ -218,10 +218,6 @@ body::-webkit-scrollbar {
     border-bottom: 1px solid black;
 } */
 
-
-
-
-
 /* .label {
     display: block;
     font-size: 16px;
@@ -232,12 +228,16 @@ body::-webkit-scrollbar {
     grid-column: span 2;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
-    display: flex;
-    align-items: center;
-    padding: 44px 4px 0px;
+    /* display: flex;
+    align-items: flex-end; */
+    padding: 44px 0px 0px;
     padding-left: 30px;
     font-weight: 400;
     font-size: 20px;
+}
+
+.label-year {
+    padding-left: 14px;
 }
 
 .year {
@@ -275,6 +275,10 @@ body::-webkit-scrollbar {
     flex-direction: column;
     border-right: 1px solid black;
     padding: 1.75rem 2rem 0.875rem 1.3125rem;
+}
+
+.grid-item.bottom-left {
+    padding-left: 2rem;
 }
 
 .grid-item.bottom-left.label,
@@ -315,7 +319,6 @@ body::-webkit-scrollbar {
     align-items:flex-end; */
     right: 0;
 }
-
 
 
 /* OUR PICTURES SECTION */
