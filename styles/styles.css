@@ -360,3 +360,12 @@ body::-webkit-scrollbar {
     height: 17rem;
     width: 100%;
 }
+
+/* DIRECTIONS SECTION */
+
+/* .directions {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:row;
+} */
