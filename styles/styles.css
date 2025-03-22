@@ -427,9 +427,63 @@ body::-webkit-scrollbar {
 
 
 /* EVENTS SECTION */
+.events-section {
+    width: 100%;
+    max-height: 42.5rem;
+}
+
 .events-section h3 {
     font-weight: 400;
     font-size: 3rem;
     margin-bottom: 5.625rem;
     padding: 0 6.25rem;
+}
+
+.event-blocks {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0; 
+    overflow: hidden;
+    
+}
+
+.event-blocks > div {
+    flex: 1;
+}
+
+.event-blocks img {
+    width: 100%;
+    height: 33.75rem;
+    flex-direction: row;
+    border: 2px solid rgb(216, 0, 0);
+    object-fit: cover;
+    display: block; 
+}
+
+.event-blocks button {
+    width: 15.25rem;
+    height: 4.125rem;
+    border-radius: 3.25rem;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.3); /* затемнення картинки */
 }
