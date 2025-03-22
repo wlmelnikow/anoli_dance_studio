@@ -52,9 +52,6 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    /* position: fixed;
-    top: 20px;
-    right: 20px; */
     z-index: 100;
 }
 
@@ -65,7 +62,6 @@ body::-webkit-scrollbar {
     transition: 0.3s;
     border-radius: 5px;
 }
-
 
 .burger>.high-span-color {
     background-color: rgb(61, 61, 61);
@@ -119,6 +115,7 @@ body::-webkit-scrollbar {
     height: 74px;
 }
 
+
 /* HERO section */
 #hero-section {
     position: relative;
@@ -136,7 +133,6 @@ body::-webkit-scrollbar {
     object-fit: cover;
     /* Щоб не було розтягування */
     z-index: 1;
-    /* margin-bottom: 6.625rem; */
 }
 
 .container {
@@ -244,15 +240,12 @@ body::-webkit-scrollbar {
     font-weight: 400;
 }
 
-
 .grid-item.bottom-left {
     display: flex;
     align-items: flex-start;
 }
 
-.grid-item.bottom-left,
-.grid-item.bottom-center,
-.grid-item.bottom-right {
+.grid-item.bottom-left, .grid-item.bottom-center, .grid-item.bottom-right {
     display: flex;
     flex-direction: column;
     border-right: 1px solid black;
@@ -263,9 +256,7 @@ body::-webkit-scrollbar {
     padding-left: 2rem;
 }
 
-.grid-item.bottom-left.label,
-.grid-item.bottom-center.label,
-.grid-item.bottom-right.label {
+.grid-item.bottom-left.label, .grid-item.bottom-center.label, .grid-item.bottom-right.label {
     font-weight: 300;
     font-size: 1.5rem;
 }
@@ -286,7 +277,6 @@ body::-webkit-scrollbar {
     position: relative;
     z-index: 100;
 }
-
 
 .studio-area {
     font-size: 36px;
@@ -309,6 +299,7 @@ body::-webkit-scrollbar {
     left: 82%;
     z-index: 1;
 }
+
 
 /* OUR PICTURES SECTION */
 .our-pictures {
@@ -427,10 +418,7 @@ body::-webkit-scrollbar {
 
 .adult-directions ol > li,
 .kid-directions ol > li{
-    /* padding-left: 50px; */
-    /* gap: 10px; */
     margin-bottom: 20px;
-    /* max-width: 100%; */
 }
 
 
