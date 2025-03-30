@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: Unbounded;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+    /* scrollbar-width: none; */
+}
+
+/* body::-webkit-scrollbar {
+    display: none;
+} */
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    padding: 0 6.25rem;
+    height: 70vh;
+}
+
+
+/* NAVIGATION BAR */
+#navigation {
+    width: 100%;
+    height: 7.3rem;
+    background-color: #bdbdbd;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#navigation>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logo>img {
+    width: 60px;
+    height: 74px;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background: gray;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burger {
+    width: 42px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.burger span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.burger>.high-span-color {
+    background-color: rgb(61, 61, 61);
+}
+
+.burger>.middle-span-color {
+    background-color: rgb(213, 0, 237);
+    width: 75%
+}
+
+.burger>.last-span-color {
+    background-color: rgb(156, 156, 156);
+    width: 55%;
+}
+
+
+/* MAIN SECTION */
+.hero-container {
+    width: 100%;
+    padding: 4.5rem 6.25rem 6.625rem 6.25rem;
+    height: 70vh;
+    
+}
+
+.our-pictures {
+    width: 100%;
+    height: 31.5625rem;
+    position: relative;
+    display: flex;
+    margin-bottom: 6.5625rem;
+}
+
+.right-pictures-container {
+    height: 100%;
+    width: 100%;
+}
+
+.left-picture {
+    height: 100%;
+    width: 38.125rem;
+    margin-right: 1.25rem;
+}
+
+.both-pictures {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.top-left-picture,
+.top-right-picture {
+    width: 100%;
+    height: 13.8rem;
+}
+
+.bottom-picture {
+    height: 17rem;
+    width: 100%;
+}
+
+.hero-container h2 {
+    margin-bottom: 1.125rem;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.hero-container p {
+    font-weight: 300;
+    font-size: 2rem;
+    width: 77.5rem;
+    margin-bottom: 2rem;
+}
+
+
+/* TRENERS SECTION */
+.treners-section h3{
+    font-weight: 400;
+    font-size: 3rem;
+}
