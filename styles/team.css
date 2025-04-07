@@ -6,23 +6,25 @@
     font-family: Unbounded;
 }
 
-html,
-body {
+html {
     width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-    /* overflow-y: scroll; */
-    /* scrollbar-width: none; */
+    scroll-behavior: smooth;
 }
 
-/* body::-webkit-scrollbar {
-    display: none;
-} */
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 
 a {
     text-decoration: none;
     color: black;
     cursor: pointer;
+}
+
+section {
+    margin-bottom: 6rem;
 }
 
 .container {
@@ -105,9 +107,7 @@ a {
 /* MAIN SECTION */
 .hero-container {
     width: 100%;
-    padding: 4.5rem 6.25rem 6.625rem 6.25rem;
-    height: 70vh;
-    
+    padding: 4.5rem 6.25rem 0rem 6.25rem;
 }
 
 .our-pictures {
@@ -161,7 +161,57 @@ a {
 
 
 /* TRENERS SECTION */
-.treners-section h3{
+.treners-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 0rem 6.25rem;
+}
+
+.treners-section h3 {
     font-weight: 400;
     font-size: 3rem;
+    align-self: flex-start; 
+    margin-bottom: 3rem;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.18125rem;
+    position: relative;
+    margin: 10px;
+    flex-basis: calc(25% - 20px);
+}
+
+
+.grid-item img {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+}
+
+.grid-item h5 {
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
 }
