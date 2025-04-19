@@ -215,3 +215,18 @@ section {
     color: white;
     text-align: center;
 }
+
+
+/* RECTANGLE SECTION */
+.rectangle {
+    width: 100%;
+    height: 41.875rem;
+    position: absolute;
+    background-color: lightgray;
+}
+
+.rectangle p {
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 462px 115px 100px 115px;
+}
