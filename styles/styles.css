@@ -92,6 +92,7 @@ a {
 
 .menu.active {
     right: 0;
+    transition: 0.3s;
 }
 
 .burger.active span:nth-child(1) {
