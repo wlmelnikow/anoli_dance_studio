@@ -11,6 +11,8 @@ body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
+    background-color:rgb(27, 27, 27);
+    color: white;
 }
 
 a {
@@ -21,6 +23,8 @@ a {
 
 button {
     cursor: pointer;
+    background-color: rgb(103 31 112);
+    color: white;
 }
 
 .container {
@@ -209,8 +213,8 @@ button {
 
 .grid-item.top-left {
     grid-column: span 2;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
     padding: 44px 0px 0px;
     padding-left: 30px;
     font-weight: 400;
@@ -227,8 +231,8 @@ button {
 }
 
 .grid-item.top-center {
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
     padding: 0 30px 0 20px;
     font-weight: 300;
     font-size: 24px;
@@ -253,7 +257,7 @@ button {
 .grid-item.bottom-right {
     display: flex;
     flex-direction: column;
-    border-right: 1px solid black;
+    border-right: 1px solid white;
     padding: 1.75rem 2rem 0.875rem 1.3125rem;
 }
 
@@ -302,7 +306,7 @@ button {
     position: absolute;
     width: 32.75rem;
     height: 14.75rem;
-    background-color: #bdbdbd;
+    background-color: rgb(103 31 112);
     left: 82%;
     z-index: 1;
 }
@@ -774,16 +778,15 @@ button {
     #navigation {
         height: 0;
     }
+
     .right-position h1 {
         position: absolute;
-        /* top: 150px; */
-        /* left: 52px; */
-        /* align-self: center; */
+        right: 120px;
+        width: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 2rem;
-        margin-right: 10px;
     }
 
     .btn-container {
@@ -812,7 +815,7 @@ button {
     .hero-p {
         font-size: clamp(1rem, 4vw, 2rem);
         position: absolute;
-        left: 18px;
+        left: 20px;
         top: 10px;
         font-size: 0.6rem;
         width: 50%;
@@ -821,7 +824,7 @@ button {
     .logo>img {
         width: 60px;
         height: 72px;
-        left: 10px;
+        left: 20px;
         position: absolute;
     }
 
@@ -836,6 +839,94 @@ button {
         position: absolute;
         right: 20px;
         bottom: 180px;
-}
+    }
 
+
+    /* STAT SECTION 320px */
+    @media (max-width: 320px) {
+        .stats {
+            transform: scale(0.35);
+            transform-origin: top left;
+            width: 100%;
+            margin: 4rem 0.5rem;
+            height: 18vh;
+        }
+
+        .grid-item.top-right {
+            padding-top: 10rem;
+        }
+
+        .grid-item.top-left {
+            padding: 44px 0px 20px 30px;
+        }
+
+        .square-style {
+            top: 26px;
+        }
+
+        .students-wrapper {
+            display: flex;
+            align-items: normal;
+            gap: 1.5rem;
+            position: relative;
+        }
+    }
+
+    /* OUR SECTION 320px */
+    .our-pictures {
+        transform: scale(0.5);
+        transform-origin: top left;
+        margin: 4rem 0.5rem 1.25rem 0.5rem;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .bottom-picture {
+        height: 17rem;
+        width: 96vh;
+    }
+
+    /* DIRECTIONS SECTION 320px */
+    .directions {
+        transform: scale(0.5);
+        transform-origin: top left;
+        width: 200%;
+    }
+
+    .text-block h3 {
+        font-size: 2rem;
+    }
+
+    .text-block p {
+        font-size: 1rem;
+    }
+
+    .direction-groups {
+        gap: 5rem;
+    }
+
+    .kid-directions ol {
+        padding-left: 50px;
+    }
+
+    .text-block {
+        max-width: 100%;
+        padding: 0 2.5rem;
+    }
+
+    .adult-directions span {
+        width: 25rem;
+        height:4.375rem;
+    }
+
+    .adult-directions span,
+    .kid-directions span {
+        border-radius: 10px;
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 18px;
+
+    }
 }
