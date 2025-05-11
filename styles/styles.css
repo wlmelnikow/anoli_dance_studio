@@ -11,7 +11,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    background-color:rgb(27, 27, 27);
+    background-color: rgb(27, 27, 27);
     color: white;
 }
 
@@ -357,7 +357,6 @@ button {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    /* padding: 0 6.25rem; */
     gap: 40px;
     margin-bottom: 6.25rem;
 }
@@ -458,10 +457,6 @@ button {
     height: 100%;
     object-fit: cover;
     display: block;
-
-    /* Видалити після тестування бордерів! */
-    /* border: none; */
-    /* border: 2px solid rgb(216, 0, 0); */
 }
 
 .event-blocks button {
@@ -476,13 +471,11 @@ button {
 .middle-block,
 .right-block {
     position: relative;
-    /* потрібен для абсолютного позиціонування всередині */
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /* необов'язково, але може згодитись */
 }
 
 .event-blocks>div {
@@ -490,7 +483,7 @@ button {
 }
 
 .event-block-second {
-    /* width: fit-content; */
+
     width: 300px;
 }
 
@@ -499,12 +492,10 @@ button {
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* Центрування */
     color: white;
     text-align: center;
     z-index: 2;
     pointer-events: none;
-    /* якщо не хочеш, щоб клік був активним */
 }
 
 .overlay p {
@@ -519,20 +510,17 @@ button {
     font-weight: 300;
     font-size: 2rem;
     pointer-events: auto;
-    /* щоб кнопка була клікабельна */
     cursor: pointer;
 }
 
 .overlay p {
     font-weight: 400;
-    /* max-width: 85%; */
     font-size: 2rem;
 }
 
 
 /* FILIALS SECTION */
 .our-filials {
-    /* height: 100%; */
     width: 100%;
     position: relative;
     margin-bottom: 110px;
@@ -559,7 +547,6 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Заполняет контейнер, обрезая изображение */
     position: absolute;
     z-index: 10;
 }
@@ -568,7 +555,6 @@ button {
     position: absolute;
     z-index: 100;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
 }
@@ -615,7 +601,6 @@ button {
     font-weight: 400;
     font-size: 3rem;
     margin-bottom: 4.25rem;
-    /* padding: 0 6.25rem; */
 }
 
 .price-content {
@@ -645,7 +630,6 @@ button {
 .price-item h4 {
     font-weight: 400;
     font-size: 2rem;
-    /* margin-bottom: 0.25rem; */
 }
 
 .price-item span {
@@ -664,7 +648,6 @@ button {
 
 .price-item ul {
     list-style-type: none;
-    /* Убираем стандартные маркеры */
     padding: 0;
     margin-bottom: 2.5rem;
 }
@@ -672,7 +655,7 @@ button {
 .price-item ul li {
     position: relative;
     padding-left: 1.2rem;
-    /* Отступ для минуса */
+    /* Відступ для мінуса */
     margin-bottom: 10px;
     font-weight: 300;
     font-size: 1rem;
@@ -681,13 +664,11 @@ button {
 
 .price-item ul li::before {
     content: "−";
-    /* Минус в виде символа */
+    /* Мінус у вигляді символа */
     position: absolute;
     left: 0;
     font-weight: 100;
-    /* Делаем жирнее */
     font-size: 1.25rem;
-    /* Можно изменить размер */
     top: -3px;
 }
 
@@ -883,6 +864,10 @@ button {
         gap: 10px;
     }
 
+    .our-pictures img {
+        object-fit: cover;
+    }
+
     .bottom-picture {
         height: 17rem;
         width: 96vh;
@@ -893,10 +878,11 @@ button {
         transform: scale(0.5);
         transform-origin: top left;
         width: 200%;
+        margin-bottom: -30rem;
     }
 
     .text-block h3 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .text-block p {
@@ -918,7 +904,7 @@ button {
 
     .adult-directions span {
         width: 25rem;
-        height:4.375rem;
+        height: 4.375rem;
     }
 
     .adult-directions span,
@@ -927,6 +913,93 @@ button {
         font-size: 1.5rem;
         font-weight: 300;
         margin-bottom: 18px;
+    }
 
+    /* EVENTS SECTION 320px */
+    .events-section {
+        transform: scale(0.5);
+        transform-origin: top left;
+        width: 200%;
+        margin-bottom: 180px;
+    }
+
+    .event-blocks {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0rem;
+    }
+
+    .events-section h3 {
+        font-weight: 400;
+        font-size: 3rem;
+        margin-bottom: 5.625rem;
+        padding: 0 2.5rem;
+    }
+
+    .overlay p {
+        font-size: 1.75rem;
+    }
+
+    .event-blocks {
+        gap: 10px;
+    }
+
+
+    /* OUR FILIALS 320px */
+    .our-filials {
+        transform: scale(0.5);
+        transform-origin: top left;
+        width: 200%;
+        height: 200px;
+    }
+
+    .text-block {
+        height: 170px;
+    }
+
+    .filial-list {
+        transform: scale(0.5);
+        transform-origin: top left;
+        width: 200%;
+    }
+
+    .filial-content h4 {
+        font-size: 3rem;
+    }
+
+
+    /* OUR FILIALS 320px */
+    .prices-section {
+        transform: scale(0.5);
+        transform-origin: top left;
+        width: 200%;
+        padding: 0 2.5rem;
+        height: 960px;
+    }
+
+    /* PRICES 320px */
+    .price-item {
+        background-color: rgb(103 31 112);
+    }
+
+    /* SLOGAN 320px */
+    .slogan {
+        transform: scale(0.5);
+        transform-origin: top left;
+        width: 200%;
+        background-color: rgb(103 31 112);
+    }
+
+    .slogan span {
+        font-size: 1.5rem;
+    }
+
+    /* ADDRESS 320px */
+
+    .address {
+        transform: scale(0.5);
+        transform-origin: top left;
+        width: 200%;
     }
 }
