@@ -1050,18 +1050,18 @@ button {
 
     .right-position h1 {
         position: absolute;
-        right: 120px;
+        right: 180px;
         width: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .btn-container {
         position: absolute;
-        bottom: 30px;
-        right: 20px;
+        bottom: -25px;
+        right: 30px;
         width: 100%;
     }
 
@@ -1070,9 +1070,9 @@ button {
     }
 
     .hero-btn {
-        width: 130px;
+        width: 150px;
         height: 40px;
-        font-size: 14px;
+        font-size: 1.25rem;
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -1086,7 +1086,7 @@ button {
         position: absolute;
         left: 20px;
         top: 10px;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         width: 50%;
     }
 
@@ -1170,7 +1170,7 @@ button {
     }
 
     .text-block h3 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .text-block p {
@@ -1182,7 +1182,7 @@ button {
     }
 
     .kid-directions ol {
-        padding-left: 70px;
+        padding-left: 50px;
     }
 
     .text-block {
@@ -1190,17 +1190,20 @@ button {
         padding: 0 2.5rem;
     }
 
-    .adult-directions span {
-        width: 25rem;
-        height: 4.375rem;
-    }
-
     .adult-directions span,
     .kid-directions span {
         border-radius: 10px;
         font-size: 1.5rem;
         font-weight: 300;
-        margin-bottom: 18px;
+        margin-bottom: 25px;
+
+        width: 20rem;
+        height: 4rem;
+    }
+
+    .adult-directions,
+    .kid-directions {
+        font-size: 1.25rem;
     }
 
     /* EVENTS SECTION 480px */
@@ -1220,13 +1223,19 @@ button {
 
     .events-section h3 {
         font-weight: 400;
-        font-size: 3rem;
+        font-size: 2rem;
         margin-bottom: 5.625rem;
         padding: 0 2.5rem;
     }
 
     .overlay p {
         font-size: 1.75rem;
+    }
+
+    .overlay button {
+        font-size: 1.5rem;
+        width: 13rem;
+        height: 3.125rem;
     }
 
     .event-blocks {
@@ -1269,12 +1278,17 @@ button {
 
     .prices-section h3 {
         margin-left: -2rem;
+        font-size: 2rem;
     }
 
 
     /* PRICES 480px */
     .price-item {
         background-color: rgb(103 31 112);
+    }
+
+    .price-item h4 {
+        font-size: 1.75rem;
     }
 
     /* SLOGAN 480px */
@@ -1318,8 +1332,12 @@ button {
 
     }
 
+    .contacts h3 {
+        font-size: 2rem;
+    }
+
     .contacts a {
         color: white;
-
+        font-size: 1rem;
     }
 }
