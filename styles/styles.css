@@ -758,7 +758,7 @@ button {
 @media (max-width: 320px) {
 
     body {
-        overflow-x:unset;
+        overflow-x: auto;
     }
 
     #navigation {
@@ -830,34 +830,33 @@ button {
 
 
     /* STAT SECTION 320px */
-    @media (max-width: 320px) {
-        .stats {
-            transform: scale(0.35);
-            transform-origin: top left;
-            width: 100%;
-            margin: 4rem 0.5rem;
-            height: 18vh;
-        }
-
-        .grid-item.top-right {
-            padding-top: 10rem;
-        }
-
-        .grid-item.top-left {
-            padding: 44px 0px 20px 30px;
-        }
-
-        .square-style {
-            top: 26px;
-        }
-
-        .students-wrapper {
-            display: flex;
-            align-items: normal;
-            gap: 1.5rem;
-            position: relative;
-        }
+    .stats {
+        transform: scale(0.35);
+        transform-origin: top left;
+        width: 100%;
+        margin: 4rem 0.5rem;
+        height: 18vh;
     }
+
+    .grid-item.top-right {
+        padding-top: 10rem;
+    }
+
+    .grid-item.top-left {
+        padding: 44px 0px 20px 30px;
+    }
+
+    .square-style {
+        top: 26px;
+    }
+
+    .students-wrapper {
+        display: flex;
+        align-items: normal;
+        gap: 1.5rem;
+        position: relative;
+    }
+
 
     /* OUR SECTION 320px */
     .our-pictures {
@@ -1008,15 +1007,12 @@ button {
         transform: scale(0.5);
         transform-origin: top left;
         width: 200%;
-    }
-
-    .address {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 0;
-        background-color: unset; 
+        background-color: unset;
     }
 
     iframe {
@@ -1030,11 +1026,300 @@ button {
         bottom: -375px;
         left: 0;
         padding: 0 2.5rem;
-        
+
     }
 
     .contacts a {
         color: white;
-        
+
+    }
+}
+
+
+
+/* Adaptive version 480px*/
+@media (max-width: 480px) {
+
+    body {
+        overflow-x: overflow;
+    }
+
+    #navigation {
+        height: 0;
+    }
+
+    .right-position h1 {
+        position: absolute;
+        right: 120px;
+        width: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+    .btn-container {
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        width: 100%;
+    }
+
+    #hero-section {
+        height: 100vh;
+    }
+
+    .hero-btn {
+        width: 130px;
+        height: 40px;
+        font-size: 14px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(103 31 112);
+        color: white;
+    }
+
+    .hero-p {
+        font-size: clamp(1rem, 4vw, 2rem);
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        font-size: 0.6rem;
+        width: 50%;
+    }
+
+    .logo>img {
+        width: 60px;
+        height: 72px;
+        left: 20px;
+        top: -134px;
+        position: absolute;
+    }
+
+    .burger {
+        width: 42px;
+        height: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 100;
+        position: absolute;
+        right: 20px;
+        bottom: 180px;
+    }
+
+
+    /* STAT SECTION 480px */
+    .stats {
+        transform: scale(0.5);
+        transform-origin: top left;
+        width: 100%;
+        margin: 5rem 0.5rem;
+        height: 18vh;
+    }
+
+    .grid-item.top-right {
+        padding-top: 10rem;
+    }
+
+    .grid-item.top-left {
+        padding: 44px 0px 20px 30px;
+    }
+
+    .square-style {
+        top: 26px;
+    }
+
+    .students-wrapper {
+        display: flex;
+        align-items: normal;
+        gap: 1.5rem;
+        position: relative;
+    }
+
+
+    /* OUR SECTION 480px */
+    .our-pictures {
+        transform: scale(0.8);
+        transform-origin: top left;
+        margin: 4rem 0.5rem 18.25rem 0.5rem;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .our-pictures img {
+        object-fit: cover;
+    }
+
+    .bottom-picture {
+        height: 17rem;
+        width: 96vh;
+    }
+
+    /* DIRECTIONS SECTION 480px */
+    .directions {
+        transform: scale(0.8);
+        transform-origin: top left;
+        width: 130%;
+        margin-bottom: -10rem;
+    }
+
+    .text-block h3 {
+        font-size: 3rem;
+    }
+
+    .text-block p {
+        font-size: 1rem;
+    }
+
+    .direction-groups {
+        gap: 5rem;
+    }
+
+    .kid-directions ol {
+        padding-left: 70px;
+    }
+
+    .text-block {
+        max-width: 100%;
+        padding: 0 2.5rem;
+    }
+
+    .adult-directions span {
+        width: 25rem;
+        height: 4.375rem;
+    }
+
+    .adult-directions span,
+    .kid-directions span {
+        border-radius: 10px;
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 18px;
+    }
+
+    /* EVENTS SECTION 480px */
+    .events-section {
+        transform: scale(0.8);
+        transform-origin: top left;
+        width: 130%;
+        margin-bottom: 41.5rem;
+    }
+
+    .event-blocks {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0rem;
+    }
+
+    .events-section h3 {
+        font-weight: 400;
+        font-size: 3rem;
+        margin-bottom: 5.625rem;
+        padding: 0 2.5rem;
+    }
+
+    .overlay p {
+        font-size: 1.75rem;
+    }
+
+    .event-blocks {
+        gap: 10px;
+    }
+
+
+    /* OUR FILIALS 480px */
+    .our-filials {
+        transform: scale(0.8);
+        transform-origin: top left;
+        width: 130%;
+        height: 200px;
+        margin-bottom: 16rem;
+    }
+
+    .text-block {
+        height: 170px;
+    }
+
+    .filial-list {
+        transform: scale(0.5);
+        transform-origin: top left;
+        width: 200%;
+    }
+
+    .filial-content h4 {
+        font-size: 3rem;
+    }
+
+
+    /* OUR FILIALS 480px */
+    .prices-section {
+        transform: scale(0.8);
+        transform-origin: top left;
+        width: 130%;
+        height: 960px;
+        margin-bottom: 34rem;
+    }
+
+    .prices-section h3 {
+        margin-left: -2rem;
+    }
+
+
+    /* PRICES 480px */
+    .price-item {
+        background-color: rgb(103 31 112);
+    }
+
+    /* SLOGAN 480px */
+    .slogan {
+        transform: scale(0.5);
+        transform-origin: top left;
+        width: 200%;
+        background-color: rgb(103 31 112);
+        height: 4.5rem;
+        margin-bottom: 7rem;
+    }
+
+    .slogan span {
+        font-size: 1.5rem;
+    }
+
+    /* ADDRESS 480px */
+    .address {
+        transform: scale(0.8);
+        transform-origin: top left;
+        width: 130%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        background-color: unset;
+    }
+
+    iframe {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .contacts {
+        position: absolute;
+        bottom: -375px;
+        left: 0;
+        padding: 0 2.5rem;
+
+    }
+
+    .contacts a {
+        color: white;
+
     }
 }
