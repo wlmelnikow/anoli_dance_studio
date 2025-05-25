@@ -331,12 +331,14 @@ button {
     height: 100%;
     width: 38.125rem;
     margin-right: 1.25rem;
+    object-fit: cover;
 }
 
 .both-pictures {
     display: flex;
     gap: 1.25rem;
     margin-bottom: 0.75rem;
+    object-fit: cover;
 }
 
 .top-left-picture,
@@ -348,6 +350,7 @@ button {
 .bottom-picture {
     height: 17rem;
     width: 100%;
+    object-fit: cover;
 }
 
 
@@ -1182,6 +1185,10 @@ button {
         gap: 6rem;
     }
 
+    .text-block {
+        margin-bottom: 2rem;
+    }
+
     .text-block h3 {
         font-size: 2rem;
     }
@@ -1201,17 +1208,17 @@ button {
 
     .adult-directions span,
     .kid-directions span {
-       
+
         font-size: 1.25rem;
         margin-bottom: 25px;
         width: 18rem;
         height: 3rem;
     }
 
-    .adult-directions ol, 
+    .adult-directions ol,
     .kid-directions ol {
-    font-size: 1.25rem;
-}
+        font-size: 1.25rem;
+    }
 
     .adult-directions,
     .kid-directions {
@@ -1228,6 +1235,7 @@ button {
 
     .event-blocks {
         max-width: 100%;
+        height: 80rem;
         display: flex;
         flex-direction: column;
         margin-bottom: 0rem;
@@ -1260,8 +1268,8 @@ button {
         transform: scale(0.8);
         transform-origin: top left;
         width: 130%;
-        height: 200px;
-        margin-bottom: 16rem;
+        height: 27rem;
+        margin-bottom: 0rem;
     }
 
     .text-block {
@@ -1281,20 +1289,34 @@ button {
 
     /* OUR FILIALS 480px */
     .prices-section {
-        transform: scale(0.8);
+        position: relative;
+        /* flex-wrap: wrap; */
+        transform: scale(1);
         transform-origin: top left;
-        width: 130%;
-        height: 960px;
-        margin-bottom: 34rem;
+        width: 109%;
+        margin-bottom: 0rem;
+        /* flex-direction: column; */
+        left: 0.9rem;
+        top: -8rem;
+        height: 18rem;
     }
 
     .prices-section h3 {
-        margin-left: -2rem;
+        margin-left: -4.9rem;
+        margin-bottom: 2rem;
         font-size: 2rem;
+        position: relative;
     }
 
 
     /* PRICES 480px */
+    .price-content {
+        transform: scale(0.31);
+        transform-origin: top left;
+        width: 500%;
+        margin-left: -11.1vh;
+    }
+
     .price-item {
         background-color: rgb(103 31 112);
     }
@@ -1304,52 +1326,52 @@ button {
     }
 
     /* SLOGAN 480px */
-    .slogan {
-        transform: scale(0.5);
-        transform-origin: top left;
-        width: 200%;
-        background-color: rgb(103 31 112);
-        height: 4.5rem;
-        margin-bottom: 7rem;
-    }
+        .slogan {
+            transform: scale(0.5);
+            transform-origin: top left;
+            width: 200%;
+            background-color: rgb(103 31 112);
+            height: 4.5rem;
+            margin-bottom: 7rem;
+        }
 
-    .slogan span {
-        font-size: 1.5rem;
-    }
+        .slogan span {
+            font-size: 1.5rem;
+        }
 
-    /* ADDRESS 480px */
-    .address {
-        transform: scale(0.8);
-        transform-origin: top left;
-        width: 130%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        background-color: unset;
-    }
+        /* ADDRESS 480px */
+        .address {
+            transform: scale(0.8);
+            transform-origin: top left;
+            width: 130%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            background-color: unset;
+        }
 
-    iframe {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
+        iframe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
 
-    .contacts {
-        position: absolute;
-        bottom: -375px;
-        left: 0;
-        padding: 0 2.5rem;
+        .contacts {
+            position: absolute;
+            bottom: -375px;
+            left: 0;
+            padding: 0 2.5rem;
+            width: 40vh;
+        }
 
-    }
+        .contacts h3 {
+            font-size: 1.5rem;
+        }
 
-    .contacts h3 {
-        font-size: 2rem;
+        .contacts a {
+            color: white;
+            font-size: 0.8rem;
+        }
     }
-
-    .contacts a {
-        color: white;
-        font-size: 1rem;
-    }
-}
