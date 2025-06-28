@@ -35,7 +35,7 @@ button {
 
 #navigation {
     width: 100%;
-    height: 7.3rem;
+    height: 5rem;
     background-color: #3a3a3a;
     z-index: 10;
     display: flex;
@@ -59,7 +59,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  z-index: 10001; /* вище за меню */
+  z-index: 10000; /* вище за меню */
   position: relative;
 }
 
@@ -125,8 +125,8 @@ button {
   z-index: 10001;
 }
 .logo>img {
-    width: 80px;
-    height: 94px;
+    width: 60px;
+    height: 74px;
 }
 
 
@@ -744,7 +744,35 @@ button {
     pointer-events: auto;
     cursor: pointer;
 }
+/* /////// */
+.like-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15.25rem;
+  height: 4.125rem;
+  border-radius: 3.25rem;
+  font-weight: 300;
+  font-size: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: rgb(103 31 112);
+  color: white;
+  border: none;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+/* Ефект наведення */
+.like-btn:hover {
+  background-color: rgb(157, 10, 176);
+}
+
+/* Ефект натискання */
+.like-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 
 /* PRICES SECTION */
@@ -827,7 +855,7 @@ button {
     top: -3px;
 }
 
-.price-item button {
+.price-item a {
     display: flex;
     justify-content: center;
     align-items: center;

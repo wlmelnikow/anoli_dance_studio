@@ -32,7 +32,7 @@ a {
 
 #navigation {
     width: 100%;
-    height: 7.3rem;
+    height: 5rem;
     background-color: #bdbdbd;
 
     z-index: 10;
@@ -57,7 +57,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  z-index: 10001; /* вище за меню */
+  z-index: 10000; /* вище за меню */
   position: relative;
 }
 
@@ -123,8 +123,8 @@ a {
   z-index: 10001;
 }
 .logo>img {
-    width: 80px;
-    height: 94px;
+    width: 60px;
+    height: 74px;
 }
 
 /* MAIN SECTION */
