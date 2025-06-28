@@ -18,27 +18,32 @@
     <header>
         <div id="navigation">
             <div class="container">
-                <div class="logo">
-                    <img src="/image/main-logo.svg" alt="dancing-person-logo">
-                </div>
-                <div class="burger">
+                <a href="index.html">
+                    <div class="logo">
+                        <img src="/image/main-logo.svg" alt="dancing-person-logo">
+                    </div>
+                </a>
+                <div class="burger" id="burger">
                     <span class="high-span-color"></span>
                     <span class="middle-span-color"></span>
                     <span class="last-span-color"></span>
                 </div>
-                <nav class="menu">
-                    <ul>
-                        <li><a href="#about"></a></li>
-                        <li><a href="#directions"></a></li>
-                        <li><a href="#schedule"></a></li>
-                        <li><a href="#branches"></a></li>
-                        <li><a href="#prices"></a></li>
-                        <li><a href="team.html"></a></li>
-                        <li><a href="#contacts"></a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
+
+        <!-- Fullscreen menu -->
+        <nav class="menu" id="menu">
+            <button class="close-btn" id="closeBtn">×</button>
+            <ul>
+                <li><a href="index.html#about-us">Про нас</a></li>
+                <li><a href="index.html#directions">Напрями</a></li>
+                <li><a href="schedule-gena.html">Розклад</a></li>
+                <li><a href="#filials">Філії</a></li>
+                <li><a href="index.html#prices">Ціни</a></li>
+                <li><a href="team.html">Команда</a></li>
+                <li><a href="index.html#contacts">Контакти</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="class-schedule">
@@ -255,6 +260,7 @@
             </div>
     </section>
 
+    <script src="/scripts/scripts.js"></script>
 </body>
 
 </html>
