@@ -36,7 +36,7 @@ button {
 #navigation {
     width: 100%;
     height: 7.3rem;
-    background-color: #bdbdbd;
+    background-color: #3a3a3a;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -484,7 +484,7 @@ button {
     align-self: flex-start;
     width: 100%;
     height: 18rem;
-
+    /* padding: 0 6.25rem; */
 }
 
 .text-block h3 {
@@ -504,8 +504,7 @@ button {
 .direction-groups {
     flex: 2;
     display: flex;
-    justify-content: space-between;
-    /* flex-direction: column; */
+    justify-content: space-evenly;
     gap: 220px;
     flex-wrap: wrap;
     padding: 0 2.5rem;
@@ -528,7 +527,7 @@ button {
     width: 22rem;
     height: 3.5rem;
     text-align: center;
-    background-color: #bdbdbd;
+    background-color: #3a3a3a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -564,10 +563,27 @@ button {
 }
 
 .event-blocks {
+     display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 2rem;
     max-width: 100%;
+    margin: 0 auto 8rem auto;
+}
+
+.event-blocks > div {
+    flex: 1 1 calc(33.333% - 1.333rem); /* рівномірно по 3 в ряд з урахуванням gap */
+    max-width: calc(33.333% - 1.333rem);
+    aspect-ratio: 4 / 3;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: #000;
     display: flex;
-    flex-direction: row;
-    margin-bottom: 8.375rem;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .event-blocks img {
@@ -596,10 +612,6 @@ button {
     overflow: hidden;
 }
 
-.event-blocks>div {
-    flex: 1 1 33.3333%;
-}
-
 .event-block-second {
 
     width: 300px;
@@ -607,26 +619,28 @@ button {
 
 .overlay {
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
     z-index: 2;
     pointer-events: none;
+    width: 100%;
 }
 
 .overlay p {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
     margin-bottom: 1rem;
 }
 
 .overlay button {
-    width: 15.25rem;
-    height: 4.125rem;
-    border-radius: 3.25rem;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 3rem;
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.25rem;
     pointer-events: auto;
     cursor: pointer;
 }
@@ -642,6 +656,29 @@ button {
     width: 100%;
     position: relative;
     margin-bottom: 110px;
+}
+
+.filials-text-block {
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    width: 100%;
+    padding: 0 6.25rem;
+    margin-bottom: 8rem;
+}
+
+.filials-text-block h3 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.filials-text-block p {
+    font-weight: 300;
+    font-size: clamp(1.5rem, 6vw, 1.5rem);
+    margin-bottom: 2rem;
+    max-width: 80%;
 }
 
 .filial-list {
@@ -803,8 +840,8 @@ button {
 /* SLOGAN */
 .slogan {
     width: 100%;
-    height: 10.375rem;
-    background-color: lightgray;
+    height: 8rem;
+    background-color: rgb(51, 51, 51);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -814,7 +851,7 @@ button {
 .slogan span {
     flex-wrap: wrap;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: clamp(1rem, 2.5vw, 2rem);
     font-style: italic;
 }
 
@@ -829,7 +866,7 @@ button {
     align-items: center;
     gap: 40px;
     padding: 0 6.25rem;
-    background-color: lightgray;
+    background-color: #3a3a3a;
 
 }
 
@@ -883,9 +920,8 @@ button {
     .hero-title_wrapper {
         align-items: center;
         text-align: center;
-        padding: 0rem 6.25rem 0rem 6.25rem;
+        padding: 0rem 6.25rem 5rem 6.25rem;
     }
-
 
     .hero-btn {
         justify-content: center;
@@ -893,6 +929,7 @@ button {
 
     .hero-subtitle_wrapper {
         font-size: 1.5rem;
+        padding: 1rem 1rem 40rem 0rem;
     }
 
     .stats {
@@ -905,95 +942,20 @@ button {
         width: 100%;
     }
 
+    .filials-text-block p {
+        font-size: clamp(1rem, 6vw, 1rem);
+        width: 100%;
+    }
+    
+
     .adult-directions span,
     .kid-directions span {
         width: 22rem;
         height: 3.5rem;
         font-size: 1.5rem;
     }
-}
 
-@media (max-width: 1000px) {
-    .direction-groups {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 3rem;
-        padding: 0 1rem;
-        width: 100%;
-    }
-
-    .adult-directions,
-    .kid-directions {
-        width: 100%;
-        max-width: 25rem;
-        text-align: center;
-    }
-
-    .adult-directions {
-        margin-bottom: 2rem;
-        /* ВІДСТУП МІЖ БЛОКАМИ */
-    }
-
-    .adult-directions span,
-    .kid-directions span {
-        width: 75%;
-        font-size: 1.25rem;
-        height: 3rem;
-    }
-
-    .adult-directions ol,
-    .kid-directions ol {
-        font-size: 1.125rem;
-        padding-left: 0;
-        margin: 0;
-    }
-
-    .adult-directions ol li,
-    .kid-directions ol li {
-        margin-bottom: 0.8rem;
-        text-align: left;
-        padding-left: 1.5rem;
-    }
-
-}
-
-@media (max-width: 1200px) {
-    .direction-groups {
-        gap: 0;
-    }
-
-}
-
-/* ТЕСТ */
-
-@media (max-width: 1200px) {
-    .event-blocks {
-        flex-wrap: wrap;
-        gap: 2rem;
-        justify-content: center;
-    }
-
-    .event-blocks>div {
-        flex: 1 1 45%;
-        max-width: 45%;
-        height: auto;
-    }
-
-    .overlay p {
-        font-size: 1.5rem;
-    }
-
-    .overlay button {
-        font-size: 1.25rem;
-        width: 10rem;
-        height: 2.5rem;
-    }
-}
-
-/* Мобілки: до 800px — по 1 блоку */
-@media (max-width: 800px) {
-    .event-blocks {
+    /* .event-blocks {
         flex-direction: column;
         align-items: center;
         gap: 2rem;
@@ -1017,8 +979,163 @@ button {
         font-size: 1rem;
         width: 10rem;
         height: 3rem;
+    } */
+}
+
+
+/* ADAPTIVE VERSION */
+
+/* 1200 PX */
+@media (max-width: 1200px) {
+    .direction-groups {
+        gap: 0;
+    }
+
+    /* .event-blocks {
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .event-blocks>div {
+        flex: 1 1 45%;
+        max-width: 45%;
+        height: auto;
+    }
+
+    .overlay p {
+        font-size: 1.5rem;
+    }
+
+    .overlay button {
+        font-size: 1.25rem;
+        width: 10rem;
+        height: 2.5rem;
+    } */
+
+}
+
+/* 1000 PX */
+@media (max-width: 1000px) {
+    .direction-groups {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: 0 1rem;
+        width: 100%;
+    }
+
+    .adult-directions,
+    .kid-directions {
+        width: 100%;
+        max-width: 25rem;
+        text-align: center;
+    }
+
+    .adult-directions {
+        margin-bottom: 2rem;
+    }
+
+    .adult-directions span,
+    .kid-directions span {
+        width: 75%;
+        font-size: 1.25rem;
+        height: 3rem;
+    }
+
+    .adult-directions ol,
+    .kid-directions ol {
+        font-size: 1.125rem;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .adult-directions ol li,
+    .kid-directions ol li {
+        margin-bottom: 0.8rem;
+        text-align: left;
+        padding-left: 1.5rem;
+    }
+
+    .filial-content h4 {
+        font-size: 1.75rem;
+    }
+
+    .filial-content p {
+        font-size: 1.25rem;
+        padding: 0 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .filial-btn {
+        font-size: 1.5rem;
+        width: 12rem;
+        height: 3.25rem;
+    }
+
+    .filial-buttons {
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .event-blocks {
+        justify-content: center;
+    }
+
+    .event-blocks > div {
+        flex: 1 1 100%;
+        max-width: 90%;
+    }
+    .slogan {
+        height: clamp(3rem, 2.5vw, 10rem);
+    }
+    
+
+}
+
+
+
+/* ТЕСТ */
+
+/* Мобілки до 700px */
+@media (max-width: 700px) {
+    .filial-list {
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    .filial-content {
+        position: relative;
+        z-index: 10;
+        padding: 1rem;
+    }
+
+    .filial-content p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        max-width: 90%;
+    }
+
+    .filial-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .filial-btn {
+        width: 90%;
+        max-width: 16rem;
+        height: 3rem;
+        font-size: 1.25rem;
+    }
+
+    .filial-list img {
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
     }
 }
 
 
-/* Adaptive Mobile 600px */
+/* tesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssst */
