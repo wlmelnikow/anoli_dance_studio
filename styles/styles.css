@@ -557,7 +557,7 @@ button {
 
 .events-section h3 {
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 5.625rem;
     padding: 0 6.25rem;
 }
@@ -748,7 +748,7 @@ button {
 
 .prices-section h3 {
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 4.25rem;
 }
 
@@ -859,7 +859,7 @@ button {
 /* ADDRESS SECTION */
 .address {
     width: 100%;
-    height: 24rem;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -899,6 +899,18 @@ button {
     margin-bottom: 2.25rem;
     font-weight: 500;
     font-size: 1.5rem;
+}
+
+.map-iframe {
+    width: 100% !important;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+.contacts a {
+    color: white;
+    text-decoration: none;
+    word-break: break-word;
 }
 
 
@@ -1139,3 +1151,49 @@ button {
 
 
 /* tesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssst */
+
+@media (max-width: 1000px) {
+  .address {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .map,
+  .contacts {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .map img {
+    margin-bottom: 1rem;
+    max-width: 80%;
+  }
+
+  .map iframe {
+    width: 100% !important;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .contacts {
+    font-size: 1rem;
+    gap: 1rem;
+    align-items:flex-start;
+    align-self:flex-start;
+  }
+
+  .contacts h3 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .contacts a {
+    word-break: break-word;
+  }
+}
