@@ -1,19 +1,21 @@
 "use strict"
 
 document.addEventListener("DOMContentLoaded", () => {
-    const burger = document.querySelector(".burger");
-    const menu = document.querySelector(".menu");
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("menu");
+  const closeBtn = document.getElementById("closeBtn");
 
-    burger.addEventListener("click", () => {
-        burger.classList.toggle("active");
-        menu.classList.toggle("active");
+  burger.addEventListener("click", () => {
+    menu.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+
+  document.querySelectorAll(".menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
     });
-
-    document.querySelectorAll(".menu a").forEach(link => {
-        link.addEventListener("click", () => {
-            burger.classList.remove("active");
-            menu.classList.remove("active");
-        });
-    });
-
-})
+  });
+});

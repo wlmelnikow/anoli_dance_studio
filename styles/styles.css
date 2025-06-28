@@ -52,72 +52,79 @@ button {
 }
 
 /* Burger menu list */
+/* Бургер */
 .burger {
-    width: 42px;
-    height: 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 100;
+  width: 42px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 10001; /* вище за меню */
+  position: relative;
 }
 
 .burger span {
-    display: block;
-    width: 100%;
-    height: 5px;
-    transition: 0.3s;
-    border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: 5px;
+  transition: 0.3s;
+  border-radius: 5px;
 }
 
-.burger>.high-span-color {
-    background-color: rgb(61, 61, 61);
-}
+.burger>.high-span-color { background-color: #f1f1f1; }
+.burger>.middle-span-color { background-color: #d500ed; width: 75%; }
+.burger>.last-span-color { background-color: #9c9c9c; width: 55%; }
 
-.burger>.middle-span-color {
-    background-color: rgb(213, 0, 237);
-    width: 75%
-}
-
-.burger>.last-span-color {
-    background-color: rgb(156, 156, 156);
-    width: 55%;
-}
-
+/* Меню */
 .menu {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100vh;
-    background: gray;
-    transition: 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 30, 30, 0.97);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 10000;
 }
 
 .menu.active {
-    right: 0;
-    transition: 0.3s;
+  transform: translateX(0%);
 }
 
-.burger.active span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-
+.menu ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
 }
 
-.burger.active span:nth-child(2) {
-    opacity: 0;
+.menu ul li {
+  margin: 1rem 0;
 }
 
-.burger.active span:nth-child(3) {
-    width: 100%;
-    background-color: rgb(151, 147, 147);
-    transform: translateY(-10px) rotate(-45deg);
-    box-shadow: 1px 1px 1px;
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
 }
 
+/* Кнопка закриття */
+.close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10001;
+}
 .logo>img {
     width: 80px;
     height: 94px;
