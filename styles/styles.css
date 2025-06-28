@@ -138,6 +138,7 @@ button {
     text-align: center;
     color: white;
     position: relative;
+    margin-bottom: 6.25rem;
 }
 
 .hero img {
@@ -173,7 +174,7 @@ button {
 .hero-title_wrapper {
     flex: 1;
     text-align: right;
-    padding: 6.25rem;
+    padding: 10rem 6.25rem 0rem 6.25rem;
     max-width: 44rem;
     flex-direction: row;
 }
@@ -246,7 +247,7 @@ button {
 /* ABOUT US section */
 .stats {
     display: flex;
-    margin: 6.25rem 6.25rem;
+    margin: 0rem 6.25rem 6.25rem 6.25rem;
     position: relative;
     z-index: 100;
 }
@@ -390,8 +391,10 @@ button {
     width: 100%;
     align-items: stretch;
     /* height: 600px; Додаємо обмеження для ПК версії */
-    overflow: hidden; /* Щоб нічого не вилітало за межі */
+    overflow: hidden;
+    /* Щоб нічого не вилітало за межі */
     padding: 0 2rem;
+    margin-bottom: 6.25rem;
 }
 
 .left-picture-container {
@@ -472,57 +475,66 @@ button {
     flex-direction: column;
     gap: 40px;
     margin-bottom: 6.25rem;
+    padding: 0 6.25rem;
 }
 
 .text-block {
     flex: 1;
-    max-width: 80%;
     text-align: left;
     align-self: flex-start;
+    width: 100%;
+    height: 18rem;
 
 }
 
 .text-block h3 {
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 16px;
+    width: 100%;
 }
 
 .text-block p {
     font-weight: 300;
-    font-size: 2rem;
-    margin-bottom: 18px;
+    font-size: clamp(1.5rem, 6vw, 1.5rem);
+    margin-bottom: 2rem;
+    max-width: 80%;
 }
 
 .direction-groups {
     flex: 2;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    /* flex-direction: column; */
     gap: 220px;
     flex-wrap: wrap;
+    padding: 0 2.5rem;
+    width: 100%;
 }
 
 .adult-directions,
 .kid-directions {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     max-width: 27.375rem;
+    /* margin-bottom: 6.25rem; */
 }
 
 .adult-directions span,
 .kid-directions span {
     border-radius: 30px;
-    width: 27.375rem;
-    height: 4.3125rem;
+    width: 22rem;
+    height: 3.5rem;
     text-align: center;
     background-color: #bdbdbd;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    font-weight: 300;
-    margin-bottom: 18px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
 }
 
 .adult-directions ol,
@@ -531,24 +543,17 @@ button {
     font-size: 1.5rem;
 }
 
-.adult-directions ol {
-    padding-left: 50px;
-}
-
-.kid-directions ol {
-    padding-left: 68px;
-}
-
 .adult-directions ol>li,
 .kid-directions ol>li {
     margin-bottom: 20px;
+
 }
 
 
 /* EVENTS SECTION */
 .events-section {
     width: 100%;
-    max-height: 42.5rem;
+    height: 100%;
 }
 
 .events-section h3 {
@@ -637,12 +642,6 @@ button {
     width: 100%;
     position: relative;
     margin-bottom: 110px;
-}
-
-.text-block {
-    width: 100%;
-    padding: 0 6.25rem;
-    height: 18rem;
 }
 
 .filial-list {
@@ -876,15 +875,17 @@ button {
     }
 
     .hero h1 {
-        font-size: clamp(2rem, 10vw, 4rem);
-        width: 100%;
+        font-size: clamp(2rem, 10vw, 3rem);
+        max-width: 100%;
         font-weight: 400;
     }
 
     .hero-title_wrapper {
         align-items: center;
         text-align: center;
+        padding: 0rem 6.25rem 0rem 6.25rem;
     }
+
 
     .hero-btn {
         justify-content: center;
@@ -893,12 +894,131 @@ button {
     .hero-subtitle_wrapper {
         font-size: 1.5rem;
     }
+
     .stats {
         transform: scale(0.7);
         height: 9rem;
     }
+
+    .text-block p {
+        font-size: clamp(1rem, 6vw, 1rem);
+        width: 100%;
+    }
+
+    .adult-directions span,
+    .kid-directions span {
+        width: 22rem;
+        height: 3.5rem;
+        font-size: 1.5rem;
+    }
 }
 
+@media (max-width: 1000px) {
+    .direction-groups {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: 0 1rem;
+        width: 100%;
+    }
+
+    .adult-directions,
+    .kid-directions {
+        width: 100%;
+        max-width: 25rem;
+        text-align: center;
+    }
+
+    .adult-directions {
+        margin-bottom: 2rem;
+        /* ВІДСТУП МІЖ БЛОКАМИ */
+    }
+
+    .adult-directions span,
+    .kid-directions span {
+        width: 75%;
+        font-size: 1.25rem;
+        height: 3rem;
+    }
+
+    .adult-directions ol,
+    .kid-directions ol {
+        font-size: 1.125rem;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .adult-directions ol li,
+    .kid-directions ol li {
+        margin-bottom: 0.8rem;
+        text-align: left;
+        padding-left: 1.5rem;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .direction-groups {
+        gap: 0;
+    }
+
+}
+
+/* ТЕСТ */
+
+@media (max-width: 1200px) {
+    .event-blocks {
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .event-blocks>div {
+        flex: 1 1 45%;
+        max-width: 45%;
+        height: auto;
+    }
+
+    .overlay p {
+        font-size: 1.5rem;
+    }
+
+    .overlay button {
+        font-size: 1.25rem;
+        width: 10rem;
+        height: 2.5rem;
+    }
+}
+
+/* Мобілки: до 800px — по 1 блоку */
+@media (max-width: 800px) {
+    .event-blocks {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .event-blocks>div {
+        flex: 1 1 100%;
+        max-width: 90%;
+        height: auto;
+    }
+
+    .overlay {
+        top: 70%;
+    }
+
+    .overlay p {
+        font-size: 1.25rem;
+    }
+
+    .overlay button {
+        font-size: 1rem;
+        width: 10rem;
+        height: 3rem;
+    }
+}
 
 
 /* Adaptive Mobile 600px */
