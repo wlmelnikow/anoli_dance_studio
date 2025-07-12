@@ -1278,3 +1278,29 @@ button {
         word-break: break-word;
     }
 }
+
+
+/* 440px */
+@media (max-width: 440px) {
+    .stats {
+        transform: scale(0.5);
+        height: 9rem;
+    }
+
+    .text-block {
+        width: 160%;
+    }
+
+    .text-block p {
+        width: 80%;
+    }
+
+    .contacts {
+        font-size: clamp(0.7rem, 2.5vw, 2rem);
+        align-self: left;
+    }
+
+    .slogan span {
+        font-size: clamp(0.8rem, 2.5vw, 2rem);
+    }
+}
