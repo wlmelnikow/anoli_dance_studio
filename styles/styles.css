@@ -1288,15 +1288,16 @@ button {
 }
 
 
-/* 440px */
-@media (max-width: 470px) {
+/* 400px */
+@media (max-width: 400px) {
     .stats {
-        transform: scale(0.4);
+        transform: scale(0.46);
         height: 9rem;
     }
 
     .text-block {
-        width: 100%;
+        width: 200%;
+        padding: 0 4rem;
     }
 
     .text-block p {
@@ -1315,10 +1316,6 @@ button {
 
 /* 400px */
 @media (max-width: 400px) {
-    .stats {
-        transform: scale(0.4);
-        height: 9rem;
-    }
 
     .contacts {
         font-size: 0.6rem;
