@@ -11,7 +11,7 @@ body {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-    background-color: rgb(41, 41, 41);
+    background-color: #232427;
     color: rgb(255, 255, 255);
 }
 
@@ -23,7 +23,9 @@ a {
 
 button {
     cursor: pointer;
-    background-color: rgb(103 31 112);
+    /* background-color: rgb(103 31 112); */
+    background: linear-gradient(to right, #BD0F71, #8826D1);
+
     color: white;
 }
 
@@ -36,7 +38,7 @@ button {
 #navigation {
     width: 100%;
     height: 5rem;
-    background-color: #3a3a3a;
+    background-color: #1B1C20;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -73,7 +75,7 @@ button {
 }
 
 .burger>.high-span-color {
-    background-color: #f1f1f1;
+    background-color: #9F09AC;
 }
 
 .burger>.middle-span-color {
@@ -377,7 +379,8 @@ button {
     position: absolute;
     width: 32.75rem;
     height: 14.75rem;
-    background-color: rgb(103 31 112);
+    /* background-color: rgb(103 31 112); */
+    background: linear-gradient(to right, #BD0F71, #8826D1);
     left: 82%;
     z-index: 1;
 }
@@ -547,7 +550,7 @@ button {
     width: 22rem;
     height: 3.5rem;
     text-align: center;
-    background-color: #3a3a3a;
+    background-color: #0F0F10;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -772,7 +775,7 @@ button {
     font-size: 2rem;
     cursor: pointer;
     text-decoration: none;
-    background-color: rgb(103 31 112);
+    background: linear-gradient(to right, #BD0F71, #8826D1);
     color: white;
     border: none;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
@@ -879,7 +882,7 @@ button {
     height: 3.25rem;
     border-radius: 3.25rem;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     pointer-events: auto;
     cursor: pointer;
     margin-bottom: 2.125rem;
@@ -891,7 +894,7 @@ button {
 .slogan {
     width: 100%;
     height: 8rem;
-    background-color: rgb(51, 51, 51);
+    background-color: #1B1C20;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -916,7 +919,7 @@ button {
     align-items: center;
     gap: 40px;
     padding: 0 6.25rem;
-    background-color: #3a3a3a;
+    background-color: #1B1C20;
 
 }
 
@@ -994,7 +997,7 @@ button {
     .like-btn {
         width: 13.25rem;
         height: 3.125rem;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .hero-subtitle_wrapper {
