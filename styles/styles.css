@@ -1262,7 +1262,7 @@ button {
     }
 
     .contacts {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         gap: 1rem;
         align-items: flex-start;
         align-self: flex-start;
@@ -1296,7 +1296,7 @@ button {
     }
 
     .text-block {
-        width: 160%;
+        width: 100%;
     }
 
     .text-block p {
