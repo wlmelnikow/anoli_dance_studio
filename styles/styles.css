@@ -53,77 +53,89 @@ button {
 
 /* Burger menu list */
 .burger {
-  width: 42px;
-  height: 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  z-index: 10000; /* вище за меню */
-  position: relative;
+    width: 42px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 10000;
+    /* вище за меню */
+    position: relative;
 }
 
 .burger span {
-  display: block;
-  width: 100%;
-  height: 5px;
-  transition: 0.3s;
-  border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 5px;
+    transition: 0.3s;
+    border-radius: 5px;
 }
 
-.burger>.high-span-color { background-color: #f1f1f1; }
-.burger>.middle-span-color { background-color: #d500ed; width: 75%; }
-.burger>.last-span-color { background-color: #9c9c9c; width: 55%; }
+.burger>.high-span-color {
+    background-color: #f1f1f1;
+}
+
+.burger>.middle-span-color {
+    background-color: #d500ed;
+    width: 75%;
+}
+
+.burger>.last-span-color {
+    background-color: #9c9c9c;
+    width: 55%;
+}
 
 /* Меню */
 .menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(30, 30, 30, 0.97);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(100%);
-  transition: transform 0.4s ease-in-out;
-  z-index: 10000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 30, 30, 0.97);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 10000;
 }
 
 .menu.active {
-  transform: translateX(0%);
+    transform: translateX(0%);
 }
 
 .menu ul {
-  list-style: none;
-  text-align: center;
-  padding: 0;
+    list-style: none;
+    text-align: center;
+    padding: 0;
 }
 
 .menu ul li {
-  margin: 1rem 0;
+    margin: 1rem 0;
 }
 
 .menu ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
 }
 
 /* Кнопка закриття */
 .close-btn {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-size: 2.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 10001;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 10001;
 }
+
 .logo>img {
     width: 60px;
     height: 74px;
@@ -145,6 +157,7 @@ button {
     color: white;
     position: relative;
     margin-bottom: 6.25rem;
+    height: 100vh;
 }
 
 .hero img {
@@ -180,14 +193,14 @@ button {
 .hero-title_wrapper {
     flex: 1;
     text-align: right;
-    padding: 10rem 6.25rem 0rem 6.25rem;
+    padding: 10rem 6.25rem 5rem 6.25rem;
     max-width: 44rem;
     flex-direction: row;
 }
 
 .hero-title {
     font-size: clamp(2rem, 6vw, 6rem);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     line-height: 1.2;
 }
 
@@ -237,6 +250,7 @@ button {
     font-size: 6rem;
     font-size: clamp(2rem, 6vw, 4rem);
     max-width: 30rem;
+
 }
 
 .cta_button {
@@ -569,7 +583,7 @@ button {
 }
 
 .event-blocks {
-     display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: wrap;
@@ -579,8 +593,9 @@ button {
     margin: 0 auto 8rem auto;
 }
 
-.event-blocks > div {
-    flex: 1 1 calc(33.333% - 1.333rem); /* рівномірно по 3 в ряд з урахуванням gap */
+.event-blocks>div {
+    flex: 1 1 calc(33.333% - 1.333rem);
+    /* рівномірно по 3 в ряд з урахуванням gap */
     max-width: calc(33.333% - 1.333rem);
     aspect-ratio: 4 / 3;
     position: relative;
@@ -744,34 +759,35 @@ button {
     pointer-events: auto;
     cursor: pointer;
 }
+
 /* /////// */
 .like-btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 15.25rem;
-  height: 4.125rem;
-  border-radius: 3.25rem;
-  font-weight: 300;
-  font-size: 2rem;
-  cursor: pointer;
-  text-decoration: none;
-  background-color: rgb(103 31 112);
-  color: white;
-  border: none;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15.25rem;
+    height: 4.125rem;
+    border-radius: 3.25rem;
+    font-weight: 300;
+    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: rgb(103 31 112);
+    color: white;
+    border: none;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Ефект наведення */
 .like-btn:hover {
-  background-color: rgb(157, 10, 176);
+    background-color: rgb(157, 10, 176);
 }
 
 /* Ефект натискання */
 .like-btn:active {
-  transform: scale(0.97);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(0.97);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -941,6 +957,7 @@ button {
     aspect-ratio: 16 / 9;
     border: none;
 }
+
 .contacts a {
     color: white;
     text-decoration: none;
@@ -958,7 +975,7 @@ button {
     }
 
     .hero h1 {
-        font-size: clamp(2rem, 10vw, 3rem);
+        font-size: clamp(2rem, 10vw, 2.25rem);
         max-width: 100%;
         font-weight: 400;
     }
@@ -966,37 +983,61 @@ button {
     .hero-title_wrapper {
         align-items: center;
         text-align: center;
-        padding: 0rem 6.25rem 5rem 6.25rem;
+        padding: 0rem 6.25rem 0rem 6.25rem;
+        margin-bottom: 12rem;
     }
 
     .hero-btn {
         justify-content: center;
     }
 
-    .hero-subtitle_wrapper {
+    .like-btn {
+        width: 13.25rem;
+        height: 3.125rem;
         font-size: 1.5rem;
-        padding: 1rem 1rem 40rem 0rem;
+    }
+
+    .hero-subtitle_wrapper {
+        font-size: 1.2rem;
+        padding: 1rem 4rem 10rem 4rem;
+        margin-bottom: 18rem;
     }
 
     .stats {
-        transform: scale(0.7);
+        transform: scale(0.6);
         height: 9rem;
     }
 
+    .square-style {
+        left: 60%;
+    }
+
+    .text-block {
+        width: 160%;
+    }
+
     .text-block p {
-        font-size: clamp(1rem, 6vw, 1rem);
-        width: 100%;
+        font-size: 1rem;
+        width: 60%;
+    }
+
+    .filials-text-block {
+        margin-bottom: 5rem;
+    }
+
+    .filials-text-block h3 {
+        max-width: 60%;
     }
 
     .filials-text-block p {
         font-size: clamp(1rem, 6vw, 1rem);
-        width: 100%;
+        max-width: 100%;
     }
-    
+
 
     .adult-directions span,
     .kid-directions span {
-        width: 22rem;
+        /* width: 100%; */
         height: 3.5rem;
         font-size: 1.5rem;
     }
@@ -1085,7 +1126,7 @@ button {
 
     .adult-directions span,
     .kid-directions span {
-        width: 75%;
+        /* width: 75%; */
         font-size: 1.25rem;
         height: 3rem;
     }
@@ -1129,14 +1170,15 @@ button {
         justify-content: center;
     }
 
-    .event-blocks > div {
+    .event-blocks>div {
         flex: 1 1 100%;
         max-width: 90%;
     }
+
     .slogan {
         height: clamp(3rem, 2.5vw, 10rem);
     }
-    
+
 
 }
 
@@ -1187,47 +1229,47 @@ button {
 /* tesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssst */
 
 @media (max-width: 1000px) {
-  .address {
-    flex-direction: column;
-    height: auto;
-    padding: 2rem 1rem;
-    gap: 2rem;
-    align-items: center;
-    text-align: center;
-  }
+    .address {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+    }
 
-  .map,
-  .contacts {
-    width: 100%;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-  }
+    .map,
+    .contacts {
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
 
-  .map img {
-    margin-bottom: 1rem;
-    max-width: 80%;
-  }
+    .map img {
+        margin-bottom: 1rem;
+        max-width: 80%;
+    }
 
-  .map iframe {
-    width: 100% !important;
-    height: auto;
-    max-width: 100%;
-  }
+    .map iframe {
+        width: 100% !important;
+        height: auto;
+        max-width: 100%;
+    }
 
-  .contacts {
-    font-size: 1rem;
-    gap: 1rem;
-    align-items:flex-start;
-    align-self:flex-start;
-  }
+    .contacts {
+        font-size: 0.9rem;
+        gap: 1rem;
+        align-items: flex-start;
+        align-self: flex-start;
+    }
 
-  .contacts h3 {
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-  }
+    .contacts h3 {
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+    }
 
-  .contacts a {
-    word-break: break-word;
-  }
+    .contacts a {
+        word-break: break-word;
+    }
 }

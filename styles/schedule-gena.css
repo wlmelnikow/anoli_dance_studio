@@ -256,3 +256,107 @@ a {
 .schedule-row button:hover {
     background-color: #3949ab;
 }
+
+
+/* ТЕСТ */
+/* === АДАПТИВНІСТЬ === */
+@media (max-width: 1024px) {
+  .class-schedule {
+    padding: 4rem 2rem;
+  }
+
+  .direction-groups {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .schedule-grid {
+    padding: 0 3rem 3rem 3rem;
+  }
+
+  .adult-dir h2,
+  .adult-dir h3,
+  .childrens-dir h2,
+  .childrens-dir h3 {
+    margin-left: 2rem;
+  }
+} 
+
+/* Мобілки до 768px */
+@media (max-width: 768px) {
+  .class-schedule h1 {
+    font-size: 2rem;
+  }
+
+  .class-schedule p {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .direction-groups {
+    gap: 2rem;
+  }
+
+  .adult-directions span,
+  .kid-directions span {
+    width: 100%;
+    font-size: 1.5rem;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .adult-directions ol,
+  .kid-directions ol {
+    font-size: 1.25rem;
+    padding-left: 2rem;
+  }
+
+  .schedule-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .schedule-grid {
+    padding: 0 1.5rem 3rem 1.5rem;
+  }
+
+  .schedule-row button {
+    width: 100%;
+  }
+}
+
+/* Маленькі екрани до 480px */
+@media (max-width: 480px) {
+  .class-schedule {
+    padding: 2rem 1rem;
+  }
+
+  .class-schedule h1 {
+    font-size: 1.5rem;
+  }
+
+  .class-schedule p {
+    font-size: 1rem;
+  }
+
+  .menu ul li a {
+    font-size: 1.5rem;
+  }
+
+  .close-btn {
+    font-size: 2rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .burger {
+    width: 36px;
+    height: 18px;
+  }
+
+  .burger span {
+    height: 4px;
+  }
+}
