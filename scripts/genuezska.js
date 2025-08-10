@@ -1,9 +1,8 @@
 "use strict"
 
 
-// Mobile menu toggle functionality
-// This script handles the opening and closing of the mobile menu 
-
+// Мобільне меню
+// Цей скрипт відкриває і закриваю модальне вікно з меню
 document.addEventListener("DOMContentLoaded", () => {
   const burger = document.getElementById("burger");
   const menu = document.getElementById("menu");
@@ -25,74 +24,81 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Запис на заняття з тренером, датою і часом
-const signButtons = document.querySelectorAll('.signup-button');
 
-signButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const style = button.dataset.style;
-    const trainer = button.dataset.trainer;
-    const time = button.dataset.time;
 
-    console.log(`Запись: ${style}, ${trainer}, ${time}`);
-    // Здесь можно отправлять эти данные куда нужно
+// Телеграм бот
+const modal = document.getElementById("modal");
+const closeBtn = document.getElementById("closeModal");
+const form = document.getElementById("contactForm");
+
+let selectedStyle = "";
+let selectedTrainer = "";
+let selectedTime = "";
+
+// Відслідковуємо всі кнопки з класом openModal
+document.querySelectorAll(".openModal").forEach(button => {
+  button.addEventListener("click", (e) => {
+    // Зчитуємо data-атрибути кнопки, на яку клікнули
+    selectedStyle = e.currentTarget.dataset.style;
+    selectedTrainer = e.currentTarget.dataset.trainer;
+    selectedTime = e.currentTarget.dataset.time;
+
+    // Відкриваємо модальне вікно
+    modal.style.display = "flex";
   });
 });
 
-
-
-
-// My test code \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-const appointmentButton = document.getElementById('appointment-btn');
-const appointmentDays = document.getElementById("days");
-const appointmentTime = document.getElementById("time");
-const appointmentPerson = document.getElementById("person");
-
-
-// JS
-const buttons = document.querySelectorAll('.appointment-btn');
-buttons.forEach((btn) => {
-    btn.addEventListener('click', function () {
-        const row = btn.closest('.schedule-row');
-        const days = row.querySelector('.days').textContent;
-        const time = row.querySelector('.time').textContent;
-        const person = row.querySelector('.person').textContent;
-
-        console.log("Дні:", days);
-        console.log("Час:", time);
-        console.log("Тренер:", person);
-
-        return perevirkaFunction()
-
-        // тут можеш викликати свою функцію perevirkaFunction, якщо треба
-        function perevirkaFunction() {
-          let getDays =  days;
-          let getTime =  time;
-          let getPerson =  person;
-
-          
-          console.log(getDays, getTime, getPerson)
-        }
-    });
+// Закриття модалки кнопкою ×
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
 });
 
-// 
-const parent = document.getElementById('adult-dir');
-const btns = document.getElementsByTagName('button');
+// Закриття модалки кліком поза контентом
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
 
-console.log(btns)
+// Обробка відправки форми
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-function buttonDefinition (btns) {
-  let getBtnIndex = 0;
+  // Збір даних з форми
+  const name = form.name.value.trim();
+  const tel = form.tel.value.trim();
 
-  if (btns.getBtnIndex() == btns[i]) {
-    getBtnIndex = btns[i]
-    console.log(getBtnIndex)
+  if (!name || !tel) {
+    alert("Будь ласка, заповніть всі поля.");
+    return;
   }
 
-  return getBtnIndex + " Main return index"
-}
+  const token = "7612632327:AAHsJRKMPTv1bRXmO-VMi8E-i3eQc41fuPg"; // твій токен
+  const chatId = "201081680"; // твій chat_id
 
-buttonDefinition(2);
+  const message = `
+Нова заявка на заняття філії ГЕНУЕЗСЬКА:
+Стиль: ${selectedStyle}
+Тренер: ${selectedTrainer}
+Час: ${selectedTime}
+Ім'я: ${name}
+Телефон: ${tel}
+  `;
 
-// Чтобы мы брали данные из строки "n", с кнопкой записи - указіваєющей на n 
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ chat_id: chatId, text: message })
+  })
+    .then(res => res.json())
+    .then(data => {
+      if (data.ok) {
+        alert("✅ Заявка відправлена! Скоро з вами зв'яжуться.");
+        form.reset();
+        modal.style.display = "none";
+      } else {
+        alert("❌ Помилка при відправці: " + data.description);
+      }
+    })
+    .catch(() => alert("❌ Помилка мережі. Спробуйте пізніше."));
+});
