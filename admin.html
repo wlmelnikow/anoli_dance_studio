@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/admin.css">
+    <title>Редагування подій</title>
+</head>
+
+<body>
+    <h2>Адмін-панель: Редагування подій</h2>
+
+    <div class="admin-form">
+        <h3>Ліва подія</h3>
+        <label>Назва:</label>
+        <input type="text" id="title-left" placeholder="Назва події">
+        <label>Картинка:</label>
+        <input type="file" id="img-left" accept="image/*">
+        <button onclick="updateEvent('left')">Зберегти</button>
+        <label>
+            <div class="check">
+                <label>
+                     Зробити події активною/неактивною
+                    <input type="checkbox" class="event-toggle" data-event="event-1">
+                    
+                </label>
+        </label>
+    </div>
+
+    <div class="admin-form">
+        <h3>Середня подія</h3>
+        <label>Назва:</label>
+        <input type="text" id="title-middle" placeholder="Назва події">
+        <label>Картинка:</label>
+        <input type="file" id="img-middle" accept="image/*">
+        <button onclick="updateEvent('middle')">Зберегти</button>
+        <label>
+            <div class="check">
+                <label>
+                     Зробити події активною/неактивною
+                    <input type="checkbox" class="event-toggle" data-event="event-2">
+                    
+                </label>
+        </label>
+    </div>
+
+    <div class="admin-form">
+        <h3>Права подія</h3>
+        <label>Назва:</label>
+        <input type="text" id="title-right" placeholder="Назва події">
+        <label>Картинка:</label>
+        <input type="file" id="img-right" accept="image/*">
+        <button onclick="updateEvent('right')">Зберегти</button>
+        <label>
+            <div class="check">
+                <label>
+                     Зробити події активною/неактивною
+                    <input type="checkbox" class="event-toggle" data-event="event-3">
+                    
+                </label>
+            </div>
+    </div>
+
+    <!-- 🔘 Кнопка скидання -->
+    <div class="admin-form">
+        <h3>Скинути дані</h3>
+        <button onclick="resetEvents()">Скинути до стандартних</button>
+    </div>
+
+    <script src="scripts/admin.js"></script>
+    <script src="scripts/events.js"></script>
+
+</body>
+
+</html>

@@ -11,7 +11,7 @@ body {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-    background-color: #232427;
+    background-color: #0e0f0f;
     color: rgb(255, 255, 255);
 }
 
@@ -38,7 +38,7 @@ button {
 #navigation {
     width: 100%;
     height: 5rem;
-    background-color: #1B1C20;
+    background-color: #0e0f0f;
     /* background: linear-gradient(to right, #BD0F71, #8826D1); */
 
     z-index: 10;
@@ -148,7 +148,7 @@ button {
 
 /* HERO section */
 .hero {
-    background-image: url('/image/IMG_5718.JPG');
+    background-image: url('/image/main-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -184,22 +184,30 @@ button {
     position: relative;
 }
 
-.hero-subtitle_wrapper {
+/* .hero-subtitle_wrapper {
     height: 100%;
     padding: 1rem 1rem 40rem 4rem;
     width: 31rem;
     text-align: start;
     max-height: 10rem;
     font-size: clamp(1rem, 6vw, 1.5rem);
-}
+} */
 
 
 .hero-title_wrapper {
     flex: 1;
     text-align: right;
-    padding: 10rem 6.25rem 5rem 6.25rem;
+    padding: 10rem 6.25rem 10rem 6.25rem;
     max-width: 44rem;
     flex-direction: row;
+    margin-left: 50rem;
+
+    /* flex: 1;
+    text-align: right;
+    max-width: 44rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-end; */
 }
 
 .hero-title {
@@ -551,7 +559,7 @@ button {
     width: 22rem;
     height: 3.5rem;
     text-align: center;
-    background-color: #0F0F10;
+    background-color: #721697;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -629,10 +637,10 @@ button {
 
 /* Неактивна кнопка */
 .event-blocks button:disabled {
-  background-color: gray; 
-  color: #ffffff; 
-  cursor: not-allowed; 
-  opacity: 1; 
+    background-color: gray;
+    color: #ffffff;
+    cursor: not-allowed;
+    opacity: 1;
 }
 
 .left-block,
@@ -982,39 +990,51 @@ button {
 
 /* Adaptive Mobile 800px */
 @media (max-width: 800px) {
+
+    .container {
+        width: 100%;
+        padding: 0 3.25rem;
+        height: 70vh;
+    }
+
     .hero_content {
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .hero h1 {
-        font-size: clamp(2rem, 10vw, 2.25rem);
+        font-size: clamp(2rem, 10vw, 1.25rem);
         max-width: 100%;
         font-weight: 400;
     }
 
     .hero-title_wrapper {
         align-items: center;
-        text-align: center;
-        padding: 0rem 6.25rem 0rem 6.25rem;
-        margin-bottom: 12rem;
+        text-align: left;
+        padding: 5rem 6.25rem 0rem 0rem;
+        max-width: 20rem;
+        margin-left: 0rem;
     }
 
     .hero-btn {
-        justify-content: center;
+        margin-right: 1rem;
     }
 
     .like-btn {
-        width: 13.25rem;
-        height: 3.125rem;
+        width: 10.25rem;
+        height: 2.5rem;
         font-size: 1.25rem;
     }
 
-    .hero-subtitle_wrapper {
+    .cta_button {
+        margin-right: 3rem;
+    }
+
+    /* .hero-subtitle_wrapper {
         font-size: 1.2rem;
         padding: 1rem 4rem 10rem 4rem;
         margin-bottom: 18rem;
-    }
+    } */
 
     .stats {
         transform: scale(0.6);
@@ -1053,6 +1073,14 @@ button {
         /* width: 100%; */
         height: 3.5rem;
         font-size: 1.5rem;
+    }
+
+    .directions {
+        padding: 0 2.25rem;
+    }
+
+    .text-block p {
+        max-width: 90%;
     }
 }
 

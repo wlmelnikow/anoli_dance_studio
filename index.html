@@ -40,6 +40,8 @@
                 <li><a href="#prices">Ціни</a></li>
                 <li><a href="team.html">Команда</a></li>
                 <li><a href="#contacts">Контакти</a></li>
+                <li><a href="login.html">Вхід &raquo</a></li>
+
             </ul>
         </nav>
 
@@ -48,9 +50,9 @@
         <div class="hero-items">
             <img class="hero_bg" src="image/main-bg.jpg" alt="dancing-womens-background-picture">
             <div class="hero_content">
-                <div class="hero-subtitle_wrapper">
+                <!-- <div class="hero-subtitle_wrapper">
                     <p class="hero-subtitle">Whereas recognition of the inherent dignity</p>
-                </div>
+                </div> -->
                 <div class="hero-title_wrapper">
                     <h1 class="hero-title">Твій простір натхнення</h1>
                     <div class="hero-btn">
@@ -181,7 +183,7 @@
 
             <div class="filial-content">
                 <h4>Філія на Каманіна</h4>
-                <p>Whereas recognition of the inherent dignity.Whereas recognition of the inherent dignity</p>
+                <p>м. Одеса, вул. Каманіна 16а/3</p>
                 <div class="filial-buttons">
                     <a class="filial-btn like-btn" href="schedule-kamanina.html">Розклад</a>
                     <a class="filial-btn like-btn" href="index.html#prices">Ціни</a>
@@ -197,7 +199,7 @@
             <div class="dark-overlay"></div>
             <div class="filial-content">
                 <h4>Філія на Генуезській</h4>
-                <p>Whereas recognition of the inherent dignity.Whereas recognition of the inherent dignity</p>
+                <p>м. Одеса, вул. Генуезська 1</p>
                 <div class="filial-buttons">
                     <a class="filial-btn like-btn" href="schedule-gena.html">Розклад</a>
                     <a class="filial-btn like-btn" href="index.html#prices">Ціни</a>
@@ -278,7 +280,19 @@
         </div>
     </section>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".event-blocks .overlay button").forEach((btn, index) => {
+                const eventKey = `event-${index + 1}`;
+                const isActive = localStorage.getItem(eventKey) === "true";
+                btn.disabled = !isActive; // якщо активна — кнопка доступна
+            });
+        });
+    </script>
+
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/events.js"></script>
+
 </body>
 
 </html>
